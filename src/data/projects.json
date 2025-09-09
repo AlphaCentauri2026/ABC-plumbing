@@ -1,0 +1,8 @@
+[
+  { "title": "Kitchen Sink Repair", "description": "Fixed leaking kitchen sink pipes with high-quality materials.", "image": "/images/sinkr.jpg", "category": "Residential" },
+  { "title": "Bathroom Renovation Plumbing", "description": "Installed new pipes and faucets for a bathroom remodel.", "image": "/images/bathroom.jpg", "category": "Residential" },
+  { "title": "Commercial Pipe Installation", "description": "Installed pipes for a new commercial building project.", "image": "/images/commercial1.jpg", "category": "Commercial" },
+  { "title": "Emergency Leak Fix", "description": "24/7 emergency service for burst pipes and major leaks.", "image": "/images/repair2.jpg", "category": "Emergency" },
+  { "title": "Water Heater Replacement", "description": "Installed energy-efficient water heater with tankless technology.", "image": "/images/boiler2.jpg", "category": "Installation" },
+  { "title": "Drain Cleaning Service", "description": "Professional unclogging of kitchen and bathroom drains.", "image": "/images/snake1.jpg", "category": "Maintenance" }
+]

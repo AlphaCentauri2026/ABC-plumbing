@@ -1,0 +1,15 @@
+{
+  "name": "ABC Plumbing",
+  "tagline": "Reliable Plumbing Services You Can Trust",
+  "description": "ABC Plumbing provides residential and commercial plumbing services including repairs, installations, and maintenance. Our professional technicians deliver fast, reliable, and high-quality work.",
+  "contact": {
+    "phone": "(555) 987-6543",
+    "email": "info@abcplumbing.com",
+    "address": "456 Waterway Avenue, Long Island, NY"
+  },
+  "socials": {
+    "facebook": "",
+    "instagram": "",
+    "linkedin": ""
+  }
+}

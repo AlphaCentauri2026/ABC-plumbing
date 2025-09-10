@@ -1,9 +1,5 @@
-import About from '../../components/About'
+import AboutNew from './page-new'
 
 export default function AboutPage() {
-  return (
-    <div className="min-h-screen">
-      <About />
-    </div>
-  )
+  return <AboutNew />
 }

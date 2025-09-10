@@ -1,21 +1,21 @@
+import EmergencyBanner from '../components/EmergencyBanner';
 import Hero from '../components/Hero';
-import About from '../components/About';
-import ImageSlider from '../components/ImageSlider';
-import Services from '../components/Services';
-import Projects from '../components/Projects';
+import SpecialOffers from '../components/SpecialOffers';
 import Testimonials from '../components/Testimonials';
-import Contact from '../components/Contact';
+import CTAStrip from '../components/CTAStrip';
+import About from '../components/About';
+import Services from '../components/Services';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <EmergencyBanner />
       <Hero />
-      <ImageSlider />
+      <SpecialOffers />
+      <Testimonials />
+      <CTAStrip />
       <About />
       <Services />
-      <Projects />
-      <Testimonials />
-      <Contact />
     </div>
   );
 }

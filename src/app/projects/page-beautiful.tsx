@@ -218,7 +218,7 @@ export default function ProjectsPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-white text-plumbing-primary font-bold py-4 px-8 rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="bg-white text-black font-bold py-4 px-8 rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   Start Your Project
                 </a>

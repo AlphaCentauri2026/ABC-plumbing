@@ -79,7 +79,7 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4 justify-end col-start-3 pr-4">
+          <div className="hidden md:flex items-center space-x-4 justify-end col-start-3 pr-0">
             <a
               href={`tel:${companyData.contact.phone}`}
               className="text-slate-900 hover:text-slate-700 font-semibold transition-colors duration-300 bg-white/80 px-3 py-2 rounded-lg shadow-sm hover:shadow-md"

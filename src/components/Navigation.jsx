@@ -32,9 +32,9 @@ export default function Navigation() {
         : 'bg-white/95 backdrop-blur-md shadow-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 min-h-[4rem] py-2 pl-32">
+        <div className="flex justify-between items-center h-16 min-h-[4rem] py-2 pl-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group absolute left-4 z-10">
+          <Link href="/" className="flex items-center space-x-3 group absolute left-8 z-10">
             {/* Logo Image Container */}
             <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-white border-2 border-plumbing-primary/20 shadow-lg transform group-hover:scale-110 transition-all duration-300">
               <img

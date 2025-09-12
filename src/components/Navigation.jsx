@@ -32,7 +32,7 @@ export default function Navigation() {
         : 'bg-white/95 backdrop-blur-md shadow-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 min-h-[4rem] py-2 pl-24">
+        <div className="grid grid-cols-3 items-center h-16 min-h-[4rem] py-2">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group absolute left-8 z-10">
             {/* Logo Image Container */}
@@ -65,7 +65,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6 justify-center col-start-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -79,7 +79,7 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 justify-end col-start-3">
             <a
               href={`tel:${companyData.contact.phone}`}
               className="text-slate-900 hover:text-slate-700 font-semibold transition-colors duration-300 bg-white/80 px-3 py-2 rounded-lg shadow-sm hover:shadow-md"

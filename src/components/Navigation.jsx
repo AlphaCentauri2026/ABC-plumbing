@@ -34,7 +34,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16 min-h-[4rem] py-2">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group absolute left-12 z-10">
+          <Link href="/" className="flex items-center space-x-3 group absolute left-36 z-10">
             {/* Logo Image Container */}
             <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-white border-2 border-plumbing-primary/20 shadow-lg transform group-hover:scale-110 transition-all duration-300">
               <img
@@ -79,7 +79,7 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4 justify-end col-start-3">
+          <div className="hidden md:flex items-center space-x-4 justify-end col-start-3 pr-4">
             <a
               href={`tel:${companyData.contact.phone}`}
               className="text-slate-900 hover:text-slate-700 font-semibold transition-colors duration-300 bg-white/80 px-3 py-2 rounded-lg shadow-sm hover:shadow-md"

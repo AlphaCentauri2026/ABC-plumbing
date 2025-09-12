@@ -338,7 +338,7 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white text-plumbing-primary font-bold py-5 px-10 rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-110 shadow-2xl flex items-center justify-center space-x-2"
+              className="bg-white text-black font-bold py-5 px-10 rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-110 shadow-2xl flex items-center justify-center space-x-2"
             >
               <span>Get Your Free Quote</span>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

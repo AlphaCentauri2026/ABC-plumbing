@@ -103,7 +103,7 @@ export default function AboutPage() {
                   onClick={() => setActiveSection(index)}
                   className={`px-8 py-4 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 ${
                     activeSection === index
-                      ? 'bg-white text-plumbing-primary shadow-2xl'
+                      ? 'bg-white text-gray-600 shadow-2xl'
                       : 'bg-white/10 text-white border border-white/30 hover:bg-white/20 backdrop-blur-sm'
                   }`}
                 >

@@ -70,7 +70,7 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-slate-700 hover:text-plumbing-primary px-3 py-2 rounded-lg hover:bg-plumbing-primary/5 transition-all duration-300 font-medium relative group"
+                className="text-slate-700 hover:text-plumbing-primary px-3 py-2 rounded-lg hover:bg-plumbing-primary/5 transition-all duration-300 font-medium text-lg relative group"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-plumbing-primary group-hover:w-full transition-all duration-300"></span>
@@ -114,7 +114,7 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="block text-slate-700 hover:text-plumbing-primary px-3 py-2 rounded-lg hover:bg-plumbing-primary/5 transition-all duration-300 font-medium"
+                className="block text-slate-700 hover:text-plumbing-primary px-3 py-2 rounded-lg hover:bg-plumbing-primary/5 transition-all duration-300 font-medium text-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}

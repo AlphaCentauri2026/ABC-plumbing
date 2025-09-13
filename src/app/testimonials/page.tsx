@@ -1,5 +1,5 @@
-import TestimonialsBeautiful from './page-beautiful'
+import TestimonialsNew from './page-new'
 
 export default function TestimonialsPage() {
-  return <TestimonialsBeautiful />
+  return <TestimonialsNew />
 }

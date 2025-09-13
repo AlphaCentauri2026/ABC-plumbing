@@ -1,5 +1,5 @@
-import ProjectsBeautiful from './page-beautiful'
+import ProjectsNew from './page-new'
 
 export default function ProjectsPage() {
-  return <ProjectsBeautiful />
+  return <ProjectsNew />
 }

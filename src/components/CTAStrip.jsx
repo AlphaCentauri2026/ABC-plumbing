@@ -11,7 +11,7 @@ const CTAStrip = () => {
   }, [])
 
   return (
-    <section className="py-16 bg-gradient-to-r from-plumbing-primary via-plumbing-secondary to-aqua-500 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-slate-800 via-plumbing-primary to-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

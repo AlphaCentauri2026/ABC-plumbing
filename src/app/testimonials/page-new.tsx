@@ -93,7 +93,7 @@ export default function TestimonialsPage() {
     return (
       <div
         data-index={index}
-        className={`testimonial-card bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-100 overflow-hidden cursor-pointer ${
+        className={`testimonial-card bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden cursor-pointer ${
           isVisible ? 'animate-fade-in-up opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
         }`}
         style={{ animationDelay: `${index * 0.1}s` }}
@@ -117,44 +117,46 @@ export default function TestimonialsPage() {
               )}
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-800">{testimonial.name}</h3>
+              <h3 className="text-xl font-bold text-white">{testimonial.name}</h3>
               <div className="flex text-yellow-400 mb-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <span key={i} className="text-lg">★</span>
                 ))}
               </div>
-              <p className="text-sm text-slate-500">{testimonial.location}</p>
+              <p className="text-sm text-slate-300">{testimonial.location}</p>
             </div>
           </div>
         </div>
 
         {/* Service Badge */}
         <div className="px-6 pb-4">
-          <span className="inline-block bg-plumbing-primary/10 text-plumbing-primary px-3 py-1 rounded-full text-sm font-semibold mb-3">
+          <span className="inline-block bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-semibold mb-3">
             {testimonial.service}
           </span>
         </div>
 
         {/* Testimonial Text */}
         <div className="px-6 pb-6">
-          <blockquote className="text-slate-600 leading-relaxed italic">
+          <blockquote className="text-slate-300 leading-relaxed italic">
             "{testimonial.feedback}"
           </blockquote>
         </div>
 
         {/* Before/After Preview */}
-        <div className="bg-slate-50 px-6 py-4 border-t border-slate-100">
-          <div className="text-sm text-slate-600 mb-2">Transformation:</div>
+        <div className="bg-white/5 px-6 py-4 border-t border-white/10">
+          <div className="text-sm text-slate-300 mb-2">Transformation:</div>
           <div className="flex justify-between text-xs">
-            <span className="text-red-500">❌ {testimonial.beforeAfter.before}</span>
-            <span className="text-green-500">✅ {testimonial.beforeAfter.after}</span>
+            <span className="text-red-400">❌ {testimonial.beforeAfter.before}</span>
+            <span className="text-green-400">✅ {testimonial.beforeAfter.after}</span>
           </div>
         </div>
 
         {/* Hover Effect */}
-        <div className="absolute inset-0 bg-plumbing-primary/5 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <div className="text-center text-plumbing-primary">
-            <div className="text-2xl mb-2">📖</div>
+        <div className="absolute inset-0 bg-cyan-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <div className="text-center text-cyan-400">
+            <svg className="w-8 h-8 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
             <p className="font-semibold">Read Full Story</p>
           </div>
         </div>
@@ -163,45 +165,49 @@ export default function TestimonialsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-plumbing-light to-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-plumbing-primary to-slate-800 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-plumbing-secondary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-aqua-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-plumbing-primary/5 to-aqua-500/5 rounded-full blur-3xl"></div>
+      </div>
+
       {/* Hero Section - Story-Based Introduction */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-plumbing-primary/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-aqua-400/10 rounded-full blur-3xl"></div>
-        </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full mb-6 shadow-lg">
-              <span className="text-2xl">📖</span>
-              <span className="text-plumbing-primary font-semibold">Customer Stories</span>
+            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20">
+              <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              <span className="text-white font-semibold">Customer Stories</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-800 mb-6">
-              Real <span className="text-plumbing-primary">Stories</span>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Real <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-300">Stories</span>
             </h1>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
               Every project tells a story. Read about real experiences from our satisfied customers
               who trusted us with their plumbing needs and got exceptional results.
             </p>
 
             {/* Overall Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-              <div className="bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg">
-                <div className="text-3xl font-bold text-plumbing-primary mb-1">4.9/5</div>
-                <div className="text-slate-600 font-medium">Average Rating</div>
+              <div className="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg border border-white/20">
+                <div className="text-3xl font-bold text-white mb-1">4.9/5</div>
+                <div className="text-cyan-300 font-medium">Average Rating</div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg">
-                <div className="text-3xl font-bold text-plumbing-primary mb-1">500+</div>
-                <div className="text-slate-600 font-medium">Happy Customers</div>
+              <div className="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg border border-white/20">
+                <div className="text-3xl font-bold text-white mb-1">500+</div>
+                <div className="text-cyan-300 font-medium">Happy Customers</div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg">
-                <div className="text-3xl font-bold text-plumbing-primary mb-1">98%</div>
-                <div className="text-slate-600 font-medium">Would Recommend</div>
+              <div className="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg border border-white/20">
+                <div className="text-3xl font-bold text-white mb-1">98%</div>
+                <div className="text-cyan-300 font-medium">Would Recommend</div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg">
-                <div className="text-3xl font-bold text-plumbing-primary mb-1">100%</div>
-                <div className="text-slate-600 font-medium">Satisfaction Rate</div>
+              <div className="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg border border-white/20">
+                <div className="text-3xl font-bold text-white mb-1">100%</div>
+                <div className="text-cyan-300 font-medium">Satisfaction Rate</div>
               </div>
             </div>
           </div>
@@ -209,20 +215,20 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Filter & Sort Controls */}
-      <section className="sticky top-16 z-40 bg-white shadow-lg border-b border-slate-200">
+      <section className="sticky top-16 z-40 bg-slate-800/90 backdrop-blur-sm shadow-lg border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-6 py-6">
             {/* Rating Filter */}
             <div className="flex items-center space-x-2">
-              <span className="font-semibold text-slate-700">Rating:</span>
+              <span className="font-semibold text-white">Rating:</span>
               {['all', '5', '4', '3'].map((rating) => (
                 <button
                   key={rating}
                   onClick={() => setFilterRating(rating)}
                   className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 ${
                     filterRating === rating
-                      ? 'bg-plumbing-primary text-white'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                      : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                   }`}
                 >
                   {rating === 'all' ? 'All' : `${rating} Stars`}
@@ -232,7 +238,7 @@ export default function TestimonialsPage() {
 
             {/* Sort Options */}
             <div className="flex items-center space-x-2">
-              <span className="font-semibold text-slate-700">Sort:</span>
+              <span className="font-semibold text-white">Sort:</span>
               {[
                 { value: 'recent', label: 'Most Recent' },
                 { value: 'rating', label: 'Highest Rated' }
@@ -242,8 +248,8 @@ export default function TestimonialsPage() {
                   onClick={() => setSortBy(option.value)}
                   className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 ${
                     sortBy === option.value
-                      ? 'bg-plumbing-primary text-white'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                      : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                   }`}
                 >
                   {option.label}
@@ -258,10 +264,10 @@ export default function TestimonialsPage() {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-              Customer Experiences
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Customer <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-300">Experiences</span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Real stories from real customers who experienced our professional plumbing services.
             </p>
           </div>
@@ -274,15 +280,15 @@ export default function TestimonialsPage() {
 
           {/* Call to Action */}
           <div className="text-center">
-            <div className="bg-gradient-to-r from-plumbing-primary to-plumbing-secondary rounded-3xl p-12 text-white max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-3xl p-12 text-white max-w-4xl mx-auto border border-white/20">
               <h3 className="text-3xl md:text-4xl font-bold mb-4">Share Your Story</h3>
-              <p className="text-xl mb-8 opacity-90">
+              <p className="text-xl mb-8 text-slate-300">
                 Have you experienced our excellent service? We'd love to hear your story and share it with others.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-white text-plumbing-primary font-bold py-4 px-8 rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   Share Your Experience
                 </a>
@@ -301,21 +307,21 @@ export default function TestimonialsPage() {
       {/* Testimonial Details Modal */}
       {selectedTestimonial && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={() => setSelectedTestimonial(null)}>
-          <div className="bg-white rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-slate-800 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-white/20" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-8">
               <div>
-                <h2 className="text-4xl font-bold text-slate-800 mb-2">Customer Story</h2>
+                <h2 className="text-4xl font-bold text-white mb-2">Customer Story</h2>
                 <div className="flex items-center space-x-4">
-                  <span className="text-slate-500">{selectedTestimonial.location}</span>
-                  <span className="text-slate-500">•</span>
-                  <span className="text-slate-500">{selectedTestimonial.date}</span>
+                  <span className="text-slate-300">{selectedTestimonial.location}</span>
+                  <span className="text-slate-300">•</span>
+                  <span className="text-slate-300">{selectedTestimonial.date}</span>
                 </div>
               </div>
               <button
                 onClick={() => setSelectedTestimonial(null)}
-                className="w-12 h-12 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center transition-colors duration-300"
+                className="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300"
               >
-                <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -330,13 +336,13 @@ export default function TestimonialsPage() {
                     alt={selectedTestimonial.name}
                     className="w-24 h-24 rounded-full object-cover mx-auto mb-4 shadow-lg"
                   />
-                  <h3 className="text-2xl font-bold text-slate-800 mb-2">{selectedTestimonial.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">{selectedTestimonial.name}</h3>
                   <div className="flex justify-center mb-3">
                     {[...Array(selectedTestimonial.rating)].map((_, i) => (
                       <span key={i} className="text-yellow-400 text-2xl">★</span>
                     ))}
                   </div>
-                  <div className="bg-plumbing-primary text-white px-4 py-2 rounded-full text-sm font-semibold inline-block">
+                  <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block">
                     {selectedTestimonial.service}
                   </div>
                 </div>
@@ -344,41 +350,41 @@ export default function TestimonialsPage() {
 
               {/* Story Content */}
               <div className="lg:col-span-2 space-y-6">
-                <div className="bg-slate-50 rounded-2xl p-6">
-                  <h4 className="text-xl font-bold text-slate-800 mb-3">Their Experience</h4>
-                  <p className="text-slate-700 leading-relaxed text-lg italic">
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                  <h4 className="text-xl font-bold text-white mb-3">Their Experience</h4>
+                  <p className="text-slate-300 leading-relaxed text-lg italic">
                     "{selectedTestimonial.story}"
                   </p>
                 </div>
 
-                <div className="bg-blue-50 rounded-2xl p-6">
-                  <h4 className="text-xl font-bold text-slate-800 mb-3">Original Review</h4>
-                  <p className="text-slate-700 leading-relaxed">
+                <div className="bg-cyan-500/10 border border-cyan-500/20 rounded-2xl p-6">
+                  <h4 className="text-xl font-bold text-white mb-3">Original Review</h4>
+                  <p className="text-slate-300 leading-relaxed">
                     "{selectedTestimonial.feedback}"
                   </p>
                 </div>
 
-                <div className="bg-green-50 rounded-2xl p-6">
-                  <h4 className="text-xl font-bold text-slate-800 mb-3">Transformation</h4>
+                <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-6">
+                  <h4 className="text-xl font-bold text-white mb-3">Transformation</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="text-center">
                       <div className="text-2xl mb-2">❌</div>
-                      <h5 className="font-semibold text-slate-800 mb-1">Before</h5>
-                      <p className="text-slate-600 text-sm">{selectedTestimonial.beforeAfter.before}</p>
+                      <h5 className="font-semibold text-white mb-1">Before</h5>
+                      <p className="text-slate-300 text-sm">{selectedTestimonial.beforeAfter.before}</p>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl mb-2">✅</div>
-                      <h5 className="font-semibold text-slate-800 mb-1">After</h5>
-                      <p className="text-slate-600 text-sm">{selectedTestimonial.beforeAfter.after}</p>
+                      <h5 className="font-semibold text-white mb-1">After</h5>
+                      <p className="text-slate-300 text-sm">{selectedTestimonial.beforeAfter.after}</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
-                  <a href="/contact" className="flex-1 bg-plumbing-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-plumbing-secondary transition-colors duration-300 text-center">
+                  <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center">
                     Get Similar Service
                   </a>
-                  <a href="/services" className="flex-1 border-2 border-plumbing-primary text-plumbing-primary px-6 py-3 rounded-xl font-semibold hover:bg-plumbing-primary hover:text-white transition-all duration-300 text-center">
+                  <a href="/services" className="flex-1 border-2 border-cyan-500 text-cyan-400 px-6 py-3 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 text-center">
                     View Our Services
                   </a>
                 </div>

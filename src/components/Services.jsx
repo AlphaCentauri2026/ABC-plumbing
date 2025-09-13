@@ -33,19 +33,23 @@ const Services = () => {
   }, [])
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[url('/images/pipe1.jpg')] bg-cover bg-center opacity-5"></div>
+    <section id="services" className="py-20 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-plumbing-secondary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-aqua-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-plumbing-primary/5 to-aqua-500/5 rounded-full blur-3xl"></div>
+      </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent mb-6">
-              Our Services
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-300">Services</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-800 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-300 mx-auto rounded-full"></div>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto mt-6 leading-relaxed">
             Professional plumbing solutions for residential and commercial properties
           </p>
         </div>
@@ -55,7 +59,7 @@ const Services = () => {
             <div 
               key={index} 
               data-index={index}
-              className={`service-card backdrop-blur-md bg-white/20 border border-white/30 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 overflow-hidden group transform ${
+              className={`service-card backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 overflow-hidden group transform ${
                 visibleCards.includes(index) 
                   ? 'opacity-100 translate-y-0 scale-100' 
                   : 'opacity-0 translate-y-8 scale-95'
@@ -69,16 +73,16 @@ const Services = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-4">{service.description}</p>
+                <p className="text-slate-300 leading-relaxed mb-4">{service.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="inline-block bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-xl text-sm font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-lg hover:shadow-xl">
+                  <span className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-xl text-sm font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-lg hover:shadow-xl">
                     Learn More
                   </span>
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-300">
-                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center group-hover:bg-cyan-500/30 transition-colors duration-300">
+                    <svg className="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
